@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dstyle.css">
+    <title>Overwatch Hero Reddit Mentions</title>
+</head>
+<body>
+<div class="ct-chart ct-golden-section" id="chart1" style="height:550px; width:800px;"></div>
+<div class="ct-chart ct-golden-section" id="chart2" style="height:450px; width:800px;"></div>
+
+<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<script>
+    new Chartist.Bar('#chart1',
+        {
+            labels: ['lucio', 'mercy', 'genji', 'pharah', 'zenyatta', 'roadhog', 'hanzo', 'junkrat', 'mccree', 'dva', 'zarya', 'symmetra', 'reinhardt', 'winston', 'bastion', 'reaper','soldier-76', 'tracer', 'torbjorn', 'widowmaker', 'mei'],
+            series: [
+                [266, 139, 103, 73, 48, 36, 29, 27, 25, 25, 24, 19, 16, 10, 6, 5, 1, 1, -2, -18, -23],
+            ]
+        },
+        {
+            high: 270,
+            low: -30,
+            seriesBarDistance: 5,
+            axisX: {
+                labelInterpolationFnc: function (value) {
+                    return value.substring(0, 3);;
+                }
+            }
+
+        });
+
+    new Chartist.Bar('#chart2', {
+      labels: ['mercy', 'genji', 'reinhardt', 'hanzo', 'reaper', 'tracer', 'roadhog', 'junkrat', 'mei', 'mccree', 'lucio', 'pharah', 'zenyatta', 'zarya', 'symmetra', 'widowmaker', 'bastion', 'torbjorn', 'winston', 'dva', 'soldier-76'],
+      series: [
+          ['139', '135', '118', '99', '90', '88', '86', '83', '83', '82', '71', '69', '66', '64', '64', '60', '59', '53', '40', '17', '1'],
+      ]
+    },{
+      seriesBarDistance: 10,
+      reverseData: true,
+      horizontalBars: true,
+      axisY: {
+        offset: 70
+      }
+    });
+
+
+</script>
+</body>
+</html>

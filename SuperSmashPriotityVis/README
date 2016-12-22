@@ -1,0 +1,14 @@
+Super Smash 4 Visualization
+
+Simple Explanation to Priority in Super Smash Brothers 
+Ground-Ground
+	if attack a > attack b + 9%, attack a prio
+	if attack b > attack a + 9%, attack b prio
+	if attack a = attack b, attacks cancel
+Ground-Aerial
+	if aerial attack a and ground attack b, both attacks always hit
+Aerial-Aerial (Same as Ground-Aerial)
+	if aerial attack a and aerial attack b, both attacks hit
+	if aerial attack a > projectile b + 9%, attack a prio
+	if projectile b > aerial attack a + 9%, projectile b prio
+	if aerial attack a = projectile b, attacks cancel
